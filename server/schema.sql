@@ -6,27 +6,24 @@ USE chat;
 CREATE TABLE usernames (
   /* Describe your table here.*/
   id integer NOT NULL AUTO_INCREMENT,
-  username text,
+  username varchar(40),
   PRIMARY KEY (id)
 );
 
-CREATE TABLE rooms (
+CREATE TABLE roomnames (
   /* Describe your table here.*/
   id integer NOT NULL AUTO_INCREMENT,
-  room text,
+  roomname varchar(20),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE messages (
   /* Describe your table here.*/
   id integer NOT NULL AUTO_INCREMENT,
-  message text,
-  createdAt date,
-  username integer,
-  room integer,
-  PRIMARY KEY (id),
-  FOREIGN KEY (username) REFERENCES usernames(id),
-  FOREIGN KEY (room) REFERENCES rooms(id)
+  message varchar(280),
+  userid integer NOT NULL,
+  roomname varchar(20),
+  PRIMARY KEY (id)
 );
 
 

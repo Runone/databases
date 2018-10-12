@@ -6,9 +6,9 @@ router.get('/messages', controller.messages.get);
 
 router.post('/messages', controller.messages.post);
 
-router.get('/users', controller.users.get);
+router.get('/users', controller.usernames.get);
 
-router.post('/users', controller.users.post);
+router.post('/users', controller.usernames.post);
 
 
 module.exports = router;
